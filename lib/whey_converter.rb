@@ -28,6 +28,20 @@ module WheyConverter
       ((preco / total_proteina_embalagem) * 100).round(2)
     end
 
+     # Método de comparação entre dois produtos de whey
+     def self.comparar(whey1, whey2)
+      custo1 = whey1.custo_por_100g_proteina
+      custo2 = whey2.custo_por_100g_proteina
+
+      if custo1 < custo2
+        "O primeiro produto é mais vantajoso, custando R$#{custo1} por 100g de proteína."
+      elsif custo2 < custo1
+        "O segundo produto é mais vantajoso, custando R$#{custo2} por 100g de proteína."
+      else
+        "Ambos os produtos possuem o mesmo custo-benefício, R$#{custo1} por 100g de proteína."
+      end
+    end
+
   end
-  
+
 end
