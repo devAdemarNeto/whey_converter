@@ -1,7 +1,7 @@
 # Whey Converter
 
 ## 📌 Sobre o Projeto
-O **Whey Converter** é um pacote Ruby que compara o custo-benefício de diferentes produtos de whey protein. Ele calcula e retorna informações importantes para ajudar os consumidores a escolherem o produto mais vantajoso com base no preço e na quantidade de proteína.
+O **Whey Converter** é um pacote Ruby que compara o custo-benefício de diferentes marcas de whey protein. Ele calcula e retorna informações importantes para ajudar os consumidores a escolherem o produto mais vantajoso com base no preço e na quantidade de proteína.
 
 ## 📦 Funcionalidades
 - Calcula o percentual de proteína por porção.
