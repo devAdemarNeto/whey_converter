@@ -1,43 +1,60 @@
-# WheyConverter
+# Whey Converter
 
-TODO: Delete this and the text below, and describe your gem
+## 📌 Sobre o Projeto
+O **Whey Converter** é um pacote Ruby que compara o custo-benefício de diferentes produtos de whey protein. Ele calcula e retorna informações importantes para ajudar os consumidores a escolherem o produto mais vantajoso com base no preço e na quantidade de proteína.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/whey_converter`. To experiment with that code, run `bin/console` for an interactive prompt.
+## 📦 Funcionalidades
+- Calcula o percentual de proteína por porção.
+- Calcula a quantidade total de proteína disponível na embalagem.
+- Determina o custo por 100g de proteína.
+- Compara dois produtos e indica o mais vantajoso.
 
-## Installation
+## 🚀 Instalação
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Adicione esta linha ao seu `Gemfile` caso queira utilizar como uma gem:
 
-Install the gem and add to the application's Gemfile by executing:
-
-```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+```ruby
+# Ainda não publicado no RubyGems, use o caminho local ou GitHub
+# gem 'whey_converter', path: 'caminho/para/o/projeto'
 ```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+Ou clone o repositório e instale as dependências manualmente:
 
-```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+```sh
+git clone https://github.com/seu-usuario/whey_converter.git
+cd whey_converter
+bundle install
 ```
 
-## Usage
+## 💻 Uso
 
-TODO: Write usage instructions here
+Para utilizar a classe `WheyConverter::WheyProtein`, basta instanciar um objeto com as seguintes informações:
 
-## Development
+```ruby
+require_relative 'lib/whey_converter'
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+whey1 = WheyConverter::WheyProtein.new(900, 30, 24, 150)
+whey2 = WheyConverter::WheyProtein.new(1000, 32, 26, 180)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+puts "Percentual de proteína: #{whey1.percentual_proteina}%"
+puts "Proteína total na embalagem: #{whey1.total_proteina_embalagem}g"
+puts "Custo por 100g de proteína: R$#{whey1.custo_por_100g_proteina}"
 
-## Contributing
+puts WheyConverter::WheyProtein.comparar(whey1, whey2)
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/whey_converter. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/whey_converter/blob/master/CODE_OF_CONDUCT.md).
+## 🧪 Testes
 
-## License
+Os testes são escritos com **RSpec**. Para executá-los, rode:
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+```sh
+rspec
+```
 
-## Code of Conduct
+## 📜 Licença
+Este projeto é licenciado sob a **MIT License**.
 
-Everyone interacting in the WheyConverter project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/whey_converter/blob/master/CODE_OF_CONDUCT.md).
+---
+
+Criado por [Ademar Neto](https://github.com/devAdemarNeto).
+
